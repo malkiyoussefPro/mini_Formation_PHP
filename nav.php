@@ -18,10 +18,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="select.php">Acceuil</a>
+          <a class="nav-link active" aria-current="page" href="select.php">Listes des stagiares</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="insert.php">Listes des stagiares</a>
+          <a class="nav-link" href="insert.php">Ajouter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="update.php">Modifier</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="delete.php">Supprimer</a>
         </li>
       </ul>
     </div>

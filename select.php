@@ -32,12 +32,9 @@ Array
 ?>
 <!-- generer un tableau via Bootstrap-->
 <div class="container my-4 d-flex justify-content-end">
-<div class="row ">
-  <div class="col">
-  <input class="btn btn-success btn-sm" type="submit" value="ajouter" name="ajouter">
-  </div>
+  <a href="insert.php"> <input class="btn btn-success btn-sm" type="submit" value="ajouter" name="ajouter"></a>
 </div>
-</div>
+
 <div class="container my-2">
 <table class="table">
   <thead>
@@ -114,12 +111,23 @@ $stagiares = $q_select -> fetchAll(PDO::FETCH_OBJ);
         <td > <?=  $stagiare -> id ?>  </td>
         <td > <?=  $stagiare -> nom ?>  </td>
         <td > <?=  $stagiare -> prenom ?> </td>
-        <td > <?=  $stagiare -> age ?> ans  </td>
+        <?php
+        $bg_color = '';
+        if($stagiare -> age < 30){
+          $bg_color = 'bg-success';
+        }elseif($stagiare -> age > 50){
+          $bg_color = 'bg-warning';
+        }else{
+          $bg_color = 'bg-danger';
+        }
+
+        ?>
+        <td >  <span class="badge <?php echo $bg_color ?>  text-dark"><?=  $stagiare -> age ?> ans</span> </td>
+        
         <td>
-          <form action="" method="post">
-            <input class="btn btn-danger btn-sm" type="submit" value="modifier" name="modifier">
-            <input class="btn btn-primary btn-sm" type="submit" value="supprimer" name="supprimer">
-          </form>
+          
+          <a href="update.php"> <input class="btn btn-danger btn-sm" type="submit" value="modifier" name="modifier"></a>
+            <a href="delete.php"><input class="btn btn-primary btn-sm" type="submit" value="supprimer" name="supprimer"></a>
         </td>
         
       </tr>

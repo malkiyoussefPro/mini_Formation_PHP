@@ -50,7 +50,7 @@ if (isset($_POST['ajouter'])) {
     <label for="exampleInputEmail1" class="form-label">Age</label>
     <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="age">
   </div>
-  <button type="submit" value="ajouter utilisateur" class="btn btn-primary" name="ajouter" >Ajouter stagiare</button>
+  <button type="submit" value="ajouter utilisateur" class="btn btn-success" name="ajouter" >Ajouter stagiare</button>
 </form>
 </div>
 
